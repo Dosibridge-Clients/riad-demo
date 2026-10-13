@@ -129,6 +129,15 @@ The build is static, so any host works:
 for hashed assets, revalidation for `index.html`, and baseline security headers. Both are copied into
 `dist/` by Vite and are already applied on the live deployment.
 
+### Custom domain
+
+`https://riad-demo.chatyro.com/` is served by an explicit `CNAME riad-demo.chatyro.com →
+riad-demo.pages.dev` (proxied) in the `chatyro.com` zone.
+
+That explicit record is **required**: the zone carries a wildcard `*.chatyro.com` A record pointing at
+a different origin, so without the CNAME the subdomain hits the wrong backend and Cloudflare answers
+`525`. The same pattern is used by the neighbouring `sadmantask.chatyro.com` project.
+
 `.github/workflows/deploy-cloudflare-pages.yml` keeps the live site current on every push to `main`.
 It validates the content, builds, and deploys — and skips the deploy with a notice (rather than
 failing) when `CLOUDFLARE_ACCOUNT_ID` / `CLOUDFLARE_API_TOKEN` repository secrets are absent.
