@@ -6,7 +6,7 @@ category: "Messaging & Distributed Systems"
 tags: ["saga", "masstransit", "workflow"]
 date: "2025-12-10"
 level: "Advanced"
-author: "Riad"
+author: "Riad Hossain"
 ---
 
 A saga models a long-running business process that spans several messages, services and maybe days, without holding a transaction open across any of it. The platform-neutral name is a process manager; in MassTransit it is a state machine backed by a persisted saga instance. The failure it prevents is the distributed transaction you cannot have: an order that must reserve stock, take payment and schedule shipment, where any step can fail after the previous one succeeded. Instead of a coordinator that blocks, a saga reacts to events and remembers where it is.

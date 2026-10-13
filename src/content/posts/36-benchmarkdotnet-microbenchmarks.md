@@ -6,7 +6,7 @@ category: "Performance & Diagnostics"
 tags: ["benchmarking", "performance", "measurement"]
 date: "2026-03-16"
 level: "Advanced"
-author: "Riad"
+author: "Riad Hossain"
 ---
 
 Hand-rolled timing loops measure everything except what you asked about. The JIT has not compiled the method on the first iteration, the tiered compiler recompiles it later, the CPU caches are cold, and a result nobody consumes may be optimized away entirely. BenchmarkDotNet exists to isolate the method under test from those effects, and reading its output correctly is a skill in its own right.

@@ -6,7 +6,7 @@ category: "Messaging & Distributed Systems"
 tags: ["idempotency", "retries", "api"]
 date: "2025-12-04"
 level: "Advanced"
-author: "Riad"
+author: "Riad Hossain"
 ---
 
 An API that mutates state has to decide what to do when the same request arrives twice, and it will: a client times out and retries, a load balancer replays a request, a user double-clicks. HTTP retries are not a client bug to scold, they are a property of the transport, so the server must recognise the duplicate. Idempotency keys turn an unsafe operation into a safely repeatable one by letting the client name the request, so the second attempt is matched to the first and returns its outcome instead of performing it again.

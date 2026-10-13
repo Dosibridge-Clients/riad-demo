@@ -6,7 +6,7 @@ category: "Security & Identity"
 tags: ["security", "owasp", "api"]
 date: "2026-01-21"
 level: "Advanced"
-author: "Riad"
+author: "Riad Hossain"
 ---
 
 The OWASP Top 10 reads like a taxonomy of exotic attacks. In a .NET 8 API most of it collapses into a short list of framework defaults nobody configured: detailed error pages left on in production, a CORS policy written with `AllowAnyOrigin`, a `DbContext` whose user id comes from an unvalidated query parameter, a deserializer that binds a whole entity and lets the client set `IsAdmin`. Hardening is less about heroics than about closing the defaults that assume you are still in development.

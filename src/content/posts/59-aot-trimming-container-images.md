@@ -6,7 +6,7 @@ category: "Cloud & Deployment"
 tags: ["aot", "trimming", "containers"]
 date: "2025-10-29"
 level: "Advanced"
-author: "Riad"
+author: "Riad Hossain"
 ---
 
 Publishing a .NET service as a native image removes the runtime, the JIT and, with trimming, code the linker believes is unreachable. The payoff is a container that starts in tens of milliseconds and a base image measured in tens of megabytes. The cost is that the two things that make this possible — the linker's reachability analysis and ahead-of-time compilation — both depend on what the code statically looks like, so anything reached only by reflection, dynamic dispatch or a serialiser that generates code at runtime can vanish or fail the moment it is used.

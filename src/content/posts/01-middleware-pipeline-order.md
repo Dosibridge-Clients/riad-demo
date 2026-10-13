@@ -6,7 +6,7 @@ category: "ASP.NET Core"
 tags: ["middleware", "request-pipeline", "aspnetcore"]
 date: "2026-10-12"
 level: "Advanced"
-author: "Riad"
+author: "Riad Hossain"
 ---
 
 In ASP.NET Core the request pipeline is not a fan-out of independent hooks. Every `Use`-style call wraps the next delegate in a closure, so the position of a line in `Program.cs` decides which middleware can short-circuit the request, which one observes an exception, and whether a header ever reaches the response. Reordering two calls is a behaviour change, not a cosmetic one.

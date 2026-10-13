@@ -6,7 +6,7 @@ category: "Messaging & Distributed Systems"
 tags: ["rabbitmq", "kafka", "messaging"]
 date: "2025-12-16"
 level: "Advanced"
-author: "Riad"
+author: "Riad Hossain"
 ---
 
 Choosing between RabbitMQ and Kafka is usually framed as a throughput question, and that framing picks the wrong broker about half the time. RabbitMQ is a smart broker with thin consumers: it matches routing keys, tracks a per-message acknowledgement and discards a message once it is done. Kafka is a thin broker with smart consumers: it appends records to an ordered, partitioned log and lets each consumer group remember its own position. The decision that actually matters is which delivery and replay semantics your domain needs, because the broker that cannot express them forces that logic into your application.

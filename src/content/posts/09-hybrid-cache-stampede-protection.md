@@ -6,7 +6,7 @@ category: "ASP.NET Core"
 tags: ["caching", "stampede", "fusioncache"]
 date: "2026-08-25"
 level: "Advanced"
-author: "Riad"
+author: "Riad Hossain"
 ---
 
 A cache stampede, sometimes called a thundering herd or dogpile, is what happens when a popular cache entry expires and every concurrent request that wanted it simultaneously misses and recomputes. The first request to miss is expected work. The five thousand that miss in the same millisecond will hammer your database with identical queries and can take the whole tier down.

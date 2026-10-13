@@ -6,7 +6,7 @@ category: "ASP.NET Core"
 tags: ["configuration", "secrets", "keyvault"]
 date: "2026-08-13"
 level: "Advanced"
-author: "Riad"
+author: "Riad Hossain"
 ---
 
 The classic production incident is a service that boots fine locally and quietly connects to the wrong database in staging. Nothing throws; the connection string is simply the one from the base `appsettings.json`, because a later provider never overrode it. Configuration in ASP.NET Core is not a single settings object. It is a flat, case-insensitive view over an ordered list of providers, and the rule is brutal in its simplicity: the last provider that registered a key wins. Every override bug is really a question of position in that list.

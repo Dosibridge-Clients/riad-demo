@@ -1,13 +1,13 @@
 export const site = {
-  name: 'Riad',
+  name: 'Riad Hossain',
   title: 'Advanced .NET Core',
   tagline: 'Deep dives for engineers who ship',
   description:
     'Sixty in-depth articles on advanced .NET Core: ASP.NET Core internals, EF Core, async and concurrency, performance, security, messaging, testing and cloud deployment.',
   author: {
-    name: 'Riad',
+    name: 'Riad Hossain',
     role: '.NET Architect',
-    initials: 'R',
+    initials: 'RH',
   },
   nav: [
     { label: 'Home', to: '/' },

@@ -6,7 +6,7 @@ category: "Data & EF Core"
 tags: ["efcore", "dapper", "sql"]
 date: "2026-05-27"
 level: "Advanced"
-author: "Riad"
+author: "Riad Hossain"
 ---
 
 The moment a query outstrips what the LINQ provider can express, teams reach for raw SQL, and the moment they reach for raw SQL they wonder whether to keep EF Core in the picture at all. The answer is usually yes, but only if you understand where the abstraction stops being useful. EF Core and Dapper share a connection cleanly, and the failure modes come from mixing tracked entities with untracked results, not from the tools themselves.

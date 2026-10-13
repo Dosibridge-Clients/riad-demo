@@ -6,7 +6,7 @@ category: "Data & EF Core"
 tags: ["pgvector", "embeddings", "search"]
 date: "2026-01-03"
 level: "Advanced"
-author: "Riad"
+author: "Riad Hossain"
 ---
 
 Keyword search matches tokens; semantic search matches vectors. You embed a document and a query with the same model, store the document vector in the database, and rank by distance. The reason teams reach for `pgvector` rather than a dedicated vector store is that the vectors live next to the relational data, so a similarity query can join against tenant, status and permissions in one round trip and participate in the same transaction. The reason it goes wrong is almost always the index: an exact nearest-neighbour scan over a million rows is a sequential scan that ignores every index you hoped for.

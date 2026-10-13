@@ -6,7 +6,7 @@ category: "Data & EF Core"
 tags: ["efcore", "change-tracking", "performance"]
 date: "2026-07-02"
 level: "Advanced"
-author: "Riad"
+author: "Riad Hossain"
 ---
 
 The most common EF Core performance mistake is not a missing index. It is reading a thousand tracked entities to display twenty fields. Change tracking is not free: for every materialised entity the context allocates a snapshot of the original values, records the entity in the state manager, performs identity resolution by primary key, and wires up fixup across navigations. A query that returns a million rows to sum one column spends most of its time building tracking graphs no one will ever use.

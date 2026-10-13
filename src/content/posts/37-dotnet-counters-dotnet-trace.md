@@ -6,7 +6,7 @@ category: "Performance & Diagnostics"
 tags: ["diagnostics", "tracing", "production"]
 date: "2026-03-10"
 level: "Advanced"
-author: "Riad"
+author: "Riad Hossain"
 ---
 
 When a service misbehaves in production you rarely get to attach a profiler or restart it under a debugger. The `dotnet-counters` and `dotnet-trace` global tools attach to a running process, read its EventPipe stream, and let you answer what it is doing right now and what it was doing during that spike, without changing the deployment. Knowing which signal to read first is most of the job.

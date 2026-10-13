@@ -1,4 +1,4 @@
-# Riad — Advanced .NET Core Engineering Blog
+# Riad Hossain — Advanced .NET Core Engineering Blog
 
 A professional, fully static blog site: **React 18 + Vite + TypeScript**, hand-written CSS design
 system, Markdown content, and **60 in-depth articles on advanced .NET Core**.
@@ -79,7 +79,7 @@ category: "ASP.NET Core"
 tags: ["middleware", "performance"]
 date: "2026-10-20"
 level: "Advanced"
-author: "Riad"
+author: "Riad Hossain"
 ---
 
 Intro paragraph with no heading.

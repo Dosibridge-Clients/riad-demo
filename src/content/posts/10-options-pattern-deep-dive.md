@@ -6,7 +6,7 @@ category: "ASP.NET Core"
 tags: ["options", "configuration", "reload"]
 date: "2026-08-19"
 level: "Advanced"
-author: "Riad"
+author: "Riad Hossain"
 ---
 
 The options pattern wraps a configuration section in a strongly typed class so application code depends on a type, not a string key. Three interfaces expose those instances and they look interchangeable at a glance. They are not: each has a different lifetime, a different reload story, and a different set of places it can legally be injected.

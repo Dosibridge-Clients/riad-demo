@@ -6,7 +6,7 @@ category: "Async & Concurrency"
 tags: ["channels", "backpressure", "workers"]
 date: "2026-04-09"
 level: "Advanced"
-author: "Riad"
+author: "Riad Hossain"
 ---
 
 `System.Threading.Channels` is the in-process queue you reach for when a producer runs faster than a consumer and you do not want to lose work or grow an unbounded list. It is async-first, it supports multiple readers and writers, and it gives you one backpressure knob. The failure mode is almost always the same: the channel is created unbounded, the consumer lags, and the process dies holding a queue in memory.

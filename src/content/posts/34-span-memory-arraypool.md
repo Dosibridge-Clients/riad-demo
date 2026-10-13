@@ -6,7 +6,7 @@ category: "Performance & Diagnostics"
 tags: ["span", "memory", "allocation"]
 date: "2026-03-28"
 level: "Advanced"
-author: "Riad"
+author: "Riad Hossain"
 ---
 
 Most avoidable allocations in a .NET hot path come from slicing strings and arrays. Every `Substring` and `ToArray` allocates, and on a request path that runs thousands of times a second those allocations are what push Gen0 collections and pauses into the latency tail. `Span<T>` and `Memory<T>` let you view a region of existing memory without copying it, and `ArrayPool<T>` lets you reuse the buffer underneath so it never becomes garbage.

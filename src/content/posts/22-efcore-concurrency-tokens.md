@@ -6,7 +6,7 @@ category: "Data & EF Core"
 tags: ["efcore", "concurrency", "transactions"]
 date: "2026-06-08"
 level: "Advanced"
-author: "Riad"
+author: "Riad Hossain"
 ---
 
 Two operators open the same invoice, both edit it, and both save within a second. Without concurrency control the second write overwrites the first and nobody notices until reconciliation. EF Core supports both the optimistic and the pessimistic answer, and the choice is not stylistic: it decides whether you lose data quietly under load or hold row locks and contend for connections instead.

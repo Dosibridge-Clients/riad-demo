@@ -6,7 +6,7 @@ category: "Architecture"
 tags: ["domain-events", "outbox", "reliability"]
 date: "2026-07-20"
 level: "Advanced"
-author: "Riad"
+author: "Riad Hossain"
 ---
 
 The bug looks like this: raising a domain event inside the entity fires the alarm, an event handler sends an email or publishes to a broker, and then the transaction rolls back because a later constraint failed. The email went out; the order was never saved. Nothing in the code is obviously wrong — the event was raised at the right moment — but you have performed two separate writes with no shared transaction, and only one of them can be rolled back.

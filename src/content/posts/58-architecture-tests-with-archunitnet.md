@@ -6,7 +6,7 @@ category: "Testing & Quality"
 tags: ["architecture-tests", "quality", "boundaries"]
 date: "2025-11-04"
 level: "Advanced"
-author: "Riad"
+author: "Riad Hossain"
 ---
 
 Architecture rules live in the heads of the people who agreed to them, which means they last until the next hurried pull request. A diagram in a wiki does not fail a build. `ArchUnitNET` turns those rules into executable tests: you load your assemblies, express a rule over types and namespaces, and assert it holds. The boundary you drew — domain must not depend on infrastructure — becomes a red test the moment someone adds the wrong `using`, which is far cheaper than discovering the coupling during a refactor.

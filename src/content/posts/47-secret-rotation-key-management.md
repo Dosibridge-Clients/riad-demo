@@ -6,7 +6,7 @@ category: "Security & Identity"
 tags: ["secrets", "keys", "data-protection"]
 date: "2026-01-09"
 level: "Advanced"
-author: "Riad"
+author: "Riad Hossain"
 ---
 
 Data Protection is the .NET component that encrypts cookies, antiforgery tokens and anything else you hand it. Its default configuration stores the key ring in the user profile of the machine that generated it and protects it with the machine key. That works on one machine, and it is the source of two production failures: keys vanish on container restart so every existing cookie becomes undecryptable, and keys never leave the box they were born on so a second instance cannot read the first instance's cookies. Rotation is built in — keys expire after ninety days by default — but none of it helps if the ring is not shared and persisted.

@@ -6,7 +6,7 @@ category: "Data & EF Core"
 tags: ["migrations", "deployment", "postgres"]
 date: "2026-05-21"
 level: "Advanced"
-author: "Riad"
+author: "Riad Hossain"
 ---
 
 A migration that takes an exclusive lock on a busy table causes an outage even when the application deploy is a clean rolling restart. The database is the part of the release that cannot be rolled forward and backward at will, so schema changes need their own plan. Zero-downtime migrations are not a tool you install; they are a sequence of small, individually safe steps that never leave the old and new code unable to run against the same schema.

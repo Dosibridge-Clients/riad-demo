@@ -6,7 +6,7 @@ category: "Cloud & Deployment"
 tags: ["operations", "readiness", "checklist"]
 date: "2025-10-23"
 level: "Advanced"
-author: "Riad"
+author: "Riad Hossain"
 ---
 
 A service is ready for production when a specific set of failures is already handled, and the gap between a demo and a system is exactly that list. Readiness is not a feature; it is the collection of decisions about liveness, shutdown, configuration, observability and dependencies that you either make deliberately or inherit as incidents. The checklist below is the one I run before a .NET service takes real traffic, ordered by what bites first.

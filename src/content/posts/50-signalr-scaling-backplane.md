@@ -6,7 +6,7 @@ category: "Messaging & Distributed Systems"
 tags: ["signalr", "websockets", "scale"]
 date: "2025-12-22"
 level: "Advanced"
-author: "Riad"
+author: "Riad Hossain"
 ---
 
 A single SignalR instance holds every connection in memory, which makes broadcasting trivial and scaling deceptive. The failure shows up the day you run two replicas behind a load balancer: the message reaches clients connected to the instance that sent it and silently misses the rest. There is no error, no dropped-connection log — just half the users not receiving updates. The fix is a backplane that fans every message out to all instances, plus a story for groups, connection affinity and presence, because none of those are free once you are no longer one process.

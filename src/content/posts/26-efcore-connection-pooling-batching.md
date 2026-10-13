@@ -6,7 +6,7 @@ category: "Data & EF Core"
 tags: ["efcore", "pooling", "throughput"]
 date: "2026-05-15"
 level: "Advanced"
-author: "Riad"
+author: "Riad Hossain"
 ---
 
 Under load, the database is usually the first component to saturate, and the first symptom is a graph where throughput flatlines while latency climbs. Three knobs dominate that curve in EF Core: how contexts are pooled, how writes are batched into round trips, and how long a command is allowed to run. Tuning them without understanding what each one does produces a system that is fast in benchmarks and fragile in production.

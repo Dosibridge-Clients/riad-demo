@@ -6,7 +6,7 @@ category: "Async & Concurrency"
 tags: ["hosted-service", "workers", "lifecycle"]
 date: "2026-04-03"
 level: "Advanced"
-author: "Riad"
+author: "Riad Hossain"
 ---
 
 Long-running work that must not block a request belongs in a hosted service. The generic host starts each registered implementation during startup, stops them in reverse order during shutdown, and ties their cancellation to the same token the rest of the application observes. Getting that lifecycle right is the difference between a worker that stops promptly on deploy and one that leaves half-finished batches behind.

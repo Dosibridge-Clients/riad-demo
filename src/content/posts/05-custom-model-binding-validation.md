@@ -6,7 +6,7 @@ category: "ASP.NET Core"
 tags: ["model-binding", "validation", "filters"]
 date: "2026-09-18"
 level: "Advanced"
-author: "Riad"
+author: "Riad Hossain"
 ---
 
 Model binding exists so that action parameters and minimal-endpoint arguments arrive populated from the request without you touching `HttpContext`. Most of the time the built-in sources and `DataAnnotations` are enough. The interesting problems start when a value spans several inputs, arrives in a non-standard format, or needs validation that depends on the rest of the model.

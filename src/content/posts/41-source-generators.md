@@ -6,7 +6,7 @@ category: "Performance & Diagnostics"
 tags: ["source-generators", "roslyn", "startup"]
 date: "2026-02-14"
 level: "Advanced"
-author: "Riad"
+author: "Riad Hossain"
 ---
 
 A reflection-based mapper or serializer discovers its work at runtime: it walks types, reads attributes, builds expression trees and compiles delegates the first time a request needs them. That cost lands on your startup path and your first-request latency, and it is invisible until production warms the process under load. Source generators move the same work to the compiler. The Roslyn analyser runs during `dotnet build`, sees your types through the compilation, and emits plain C# that is compiled alongside the rest of the assembly — no runtime scanning, no warm-up, and everything visible in the object browser.

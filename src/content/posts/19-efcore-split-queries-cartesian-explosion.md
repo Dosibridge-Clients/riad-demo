@@ -6,7 +6,7 @@ category: "Data & EF Core"
 tags: ["efcore", "split-queries", "collections"]
 date: "2026-06-26"
 level: "Advanced"
-author: "Riad"
+author: "Riad Hossain"
 ---
 
 Include two collections in one query and EF Core generates a single SQL statement with a join per collection. Because the collections are independent, the database multiplies them together: five lines times four attachments produces twenty rows for one order, and EF Core then deduplicates them back in memory. This is the Cartesian explosion. It is invisible in development with three rows per table and catastrophic in production where a single order can carry hundreds of children.

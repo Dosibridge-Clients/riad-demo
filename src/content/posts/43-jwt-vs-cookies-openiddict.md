@@ -6,7 +6,7 @@ category: "Security & Identity"
 tags: ["authentication", "jwt", "openiddict"]
 date: "2026-02-02"
 level: "Advanced"
-author: "Riad"
+author: "Riad Hossain"
 ---
 
 The default ASP.NET Core template hands you JWT bearer authentication and a `[Authorize]` attribute, and that is enough to ship a mobile API. It is not enough to ship a model for every client, because a bearer token in `localStorage` and an `HttpOnly` session cookie fail in opposite directions and the wrong pick quietly creates the vulnerability you read about six months later. The decision is not JWT versus cookies at the protocol level — it is statelessness versus revocation, and who owns the token.

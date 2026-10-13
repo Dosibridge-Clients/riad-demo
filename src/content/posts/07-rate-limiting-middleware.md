@@ -6,7 +6,7 @@ category: "ASP.NET Core"
 tags: ["rate-limiting", "throttling", "reliability"]
 date: "2026-09-06"
 level: "Advanced"
-author: "Riad"
+author: "Riad Hossain"
 ---
 
 Since .NET 7 the framework ships rate limiting in the box, built on the `System.Threading.RateLimiting` primitives. It is not a bolt-on; it is middleware that plugs into the same pipeline as everything else. The subtle part is not the algorithm, it is the partitioning key and the queue behaviour, and both have defaults that bite under real load.

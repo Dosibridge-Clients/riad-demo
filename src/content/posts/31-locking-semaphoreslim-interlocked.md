@@ -6,7 +6,7 @@ category: "Async & Concurrency"
 tags: ["locking", "concurrency", "semaphoreslim"]
 date: "2026-04-15"
 level: "Advanced"
-author: "Riad"
+author: "Riad Hossain"
 ---
 
 Every synchronization primitive in the BCL answers a slightly different question. `lock` serializes access to a region of code by blocking a thread. `SemaphoreSlim` serializes access by suspending a task without parking a thread. `Interlocked` avoids the protected region altogether by making a single memory operation atomic. Choosing the wrong one produces code that compiles, runs, and only then surprises you under load with thread-pool starvation or a race that appears on a machine with more cores.

@@ -6,7 +6,7 @@ category: "Data & EF Core"
 tags: ["efcore", "value-objects", "owned-entities"]
 date: "2026-06-02"
 level: "Advanced"
-author: "Riad"
+author: "Riad Hossain"
 ---
 
 A value object has no identity and is compared by its values, which is exactly what an owned entity models when you want it stored next to its owner. EF Core maps owned types into the owner's table by default, so a money value with an amount and a currency becomes two columns rather than a second table with a foreign key nobody needs. That default is convenient and occasionally wrong, and the difference is worth understanding before you commit a schema you cannot easily change.

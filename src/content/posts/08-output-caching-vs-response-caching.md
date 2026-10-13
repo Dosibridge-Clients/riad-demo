@@ -6,7 +6,7 @@ category: "ASP.NET Core"
 tags: ["caching", "output-cache", "http-cache"]
 date: "2026-08-31"
 level: "Advanced"
-author: "Riad"
+author: "Riad Hossain"
 ---
 
 Three caching mechanisms ship in the ASP.NET Core toolbox and they are routinely confused. Response caching is HTTP-cache aware and per-node. Output caching is server-side and authoritative. `IDistributedCache` is a generic key-value store with no HTTP awareness at all. Picking the wrong one produces stale responses, inconsistent nodes, or a cache that quietly never hits.

@@ -6,7 +6,7 @@ category: "Architecture"
 tags: ["architecture", "vertical-slice", "cqrs"]
 date: "2026-08-01"
 level: "Advanced"
-author: "Riad"
+author: "Riad Hossain"
 ---
 
 Layered architecture optimises for the wrong axis. It groups code by technical role — Controllers, Services, Repositories, DTOs — so that adding a single feature means editing one file in six folders and coordinating a pull request across the whole tree. The layering looks tidy in a diagram and feels hostile in a sprint. Vertical slice architecture reorganises the same code around the feature, so everything a request needs lives together and changes together.

@@ -6,7 +6,7 @@ category: "ASP.NET Core"
 tags: ["minimal-apis", "controllers", "api-design"]
 date: "2026-09-24"
 level: "Advanced"
-author: "Riad"
+author: "Riad Hossain"
 ---
 
 The choice between minimal APIs and controllers is usually framed as taste. It is not. They run through different request plumbing, expose different extension points, and impose different constraints on trimming and ahead-of-time compilation. Pick one, and you inherit its model-binding rules, its filter chain and its conventions.

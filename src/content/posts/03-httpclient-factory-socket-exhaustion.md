@@ -6,7 +6,7 @@ category: "ASP.NET Core"
 tags: ["httpclient", "sockets", "resilience"]
 date: "2026-09-30"
 level: "Advanced"
-author: "Riad"
+author: "Riad Hossain"
 ---
 
 There are two ways to use `HttpClient` badly and they pull in opposite directions. The first is `using var client = new HttpClient()` per call. The second is one `static readonly HttpClient` shared for the process lifetime. Neither is wrong by accident; each solves the other's problem while reintroducing its own.

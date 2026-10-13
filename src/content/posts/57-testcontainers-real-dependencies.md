@@ -6,7 +6,7 @@ category: "Testing & Quality"
 tags: ["testcontainers", "docker", "testing"]
 date: "2025-11-10"
 level: "Advanced"
-author: "Riad"
+author: "Riad Hossain"
 ---
 
 An in-memory database is a mock wearing a real database's name. It does not enforce the unique index you rely on, it does not reproduce the concurrency behaviour of the real engine, and a query that passed against it can still fail in production. `Testcontainers` starts the real dependency — Postgres, RabbitMQ, Redis — in a Docker container for the duration of the test, so integration tests run against the same software the production environment runs.

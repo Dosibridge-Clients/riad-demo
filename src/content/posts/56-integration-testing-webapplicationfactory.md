@@ -6,7 +6,7 @@ category: "Testing & Quality"
 tags: ["testing", "integration", "aspnetcore"]
 date: "2025-11-16"
 level: "Advanced"
-author: "Riad"
+author: "Riad Hossain"
 ---
 
 Unit tests prove a class works; they do not prove the application wires up. Dependency injection registrations, middleware order, configuration binding and JSON serialisation are all invisible to a unit test and all capable of failing in production on the first request. `WebApplicationFactory<TEntryPoint>` boots the real application in-process, in memory, with no port and no network hop, so an integration test exercises the actual pipeline. The failure it catches is the one that only appears once the pieces are assembled.

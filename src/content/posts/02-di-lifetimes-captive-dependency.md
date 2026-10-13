@@ -6,7 +6,7 @@ category: "ASP.NET Core"
 tags: ["dependency-injection", "lifetimes", "captive-dependency"]
 date: "2026-10-06"
 level: "Advanced"
-author: "Riad"
+author: "Riad Hossain"
 ---
 
 A captive dependency is a service with a longer lifetime holding a reference to one with a shorter lifetime. The classic instance is a singleton that takes a scoped `DbContext` in its constructor. The container allows it, the code runs, and then you spend a week chasing stale entities and cross-request data bleed.

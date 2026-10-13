@@ -6,7 +6,7 @@ category: "ASP.NET Core"
 tags: ["middleware", "filters", "endpoint-filters"]
 date: "2026-09-12"
 level: "Advanced"
-author: "Riad"
+author: "Riad Hossain"
 ---
 
 Three extension points, one recurring question: at which stage of the request does this logic belong? Middleware wraps everything. MVC filters run inside the action pipeline. Endpoint filters wrap a single endpoint delegate. They overlap enough that teams pick the wrong one and only discover it when the logic cannot see the data it needs.

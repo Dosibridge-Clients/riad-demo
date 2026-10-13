@@ -6,7 +6,7 @@ category: "Performance & Diagnostics"
 tags: ["gc", "memory", "tuning"]
 date: "2026-03-22"
 level: "Advanced"
-author: "Riad"
+author: "Riad Hossain"
 ---
 
 The .NET garbage collector is generational, concurrent and mostly stop-the-world, and the single biggest configuration lever is whether it runs in workstation or server mode. That choice changes the heap layout, the number of collection threads and the memory footprint, and it is set by the host rather than by your code. Picking the wrong mode for the process shape is a common source of latency spikes and surprising resident memory.

@@ -6,7 +6,7 @@ category: "Data & EF Core"
 tags: ["efcore", "query-filters", "multi-tenancy"]
 date: "2026-07-08"
 level: "Advanced"
-author: "Riad"
+author: "Riad Hossain"
 ---
 
 Global query filters are the closest thing EF Core has to a safety net for multi-tenancy, and they are exactly as strong as the developer who remembers them. A filter configured once on the model is appended to every LINQ query on that entity — until someone writes `FromSql`, calls `IgnoreQueryFilters`, or drops to a raw database command. The filter is a convenience, not a security boundary, and treating it as one is how tenants end up sharing rows.

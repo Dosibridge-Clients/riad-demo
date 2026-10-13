@@ -6,7 +6,7 @@ category: "Async & Concurrency"
 tags: ["parallelism", "dataflow", "throughput"]
 date: "2026-04-21"
 level: "Advanced"
-author: "Riad"
+author: "Riad Hossain"
 ---
 
 When a job needs to process ten thousand items and each item waits on network or database I/O, sequential work wastes the machine and unbounded parallelism wastes the downstream service. The problem is not how to start many tasks; it is how to start exactly enough of them to saturate the bottleneck without overrunning a connection pool or a rate limit. `Parallel.ForEachAsync` and TPL Dataflow both express that bound, and both punish the one mistake of sharing a database context across iterations.

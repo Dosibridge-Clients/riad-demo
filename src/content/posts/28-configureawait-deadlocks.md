@@ -6,7 +6,7 @@ category: "Async & Concurrency"
 tags: ["async", "configureawait", "deadlock"]
 date: "2026-05-03"
 level: "Advanced"
-author: "Riad"
+author: "Riad Hossain"
 ---
 
 The deadlock that eats an afternoon looks like a hang with no exception and no CPU use, and it almost always comes from blocking on an async call while a synchronization context is captured. The mechanism is entirely mechanical once you see it, and it explains both why the bug exists and why it vanished when the team upgraded to ASP.NET Core without anyone touching the code.

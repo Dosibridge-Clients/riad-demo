@@ -6,7 +6,7 @@ category: "Security & Identity"
 tags: ["csrf", "cookies", "spa"]
 date: "2026-01-15"
 level: "Advanced"
-author: "Riad"
+author: "Riad Hossain"
 ---
 
 A browser attaches cookies to a request based on the target origin of that request, not on which page issued it. That single fact is the whole of CSRF: a page on `evil.example` can make the browser POST to `api.example` and the session cookie rides along, so the request is authenticated as the victim. `SameSite` was introduced to blunt this, and it does — right up until your SPA calls an API on a different origin, where `SameSite=Strict` stops sending the cookie at all and the developer falls back to `SameSite=None`, which is precisely the CSRF-able configuration.

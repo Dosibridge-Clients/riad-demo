@@ -6,7 +6,7 @@ category: "Messaging & Distributed Systems"
 tags: ["grpc", "protobuf", "streaming"]
 date: "2025-12-28"
 level: "Advanced"
-author: "Riad"
+author: "Riad Hossain"
 ---
 
 gRPC is HTTP/2 with a typed contract in front of it. The contract is a `.proto` file compiled into client and server stubs, the transport multiplexes many requests over one connection, and the four call shapes fall out of how the request and response are framed. Teams usually arrive from REST with a unary mental model and then discover that streaming is not a performance switch you flip — it is a different contract with different failure semantics, and choosing the wrong one produces a service that buffers the entire result set in memory because the client asked for a stream.

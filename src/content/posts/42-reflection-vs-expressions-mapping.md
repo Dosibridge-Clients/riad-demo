@@ -6,7 +6,7 @@ category: "Performance & Diagnostics"
 tags: ["reflection", "expressions", "mapping"]
 date: "2026-02-08"
 level: "Advanced"
-author: "Riad"
+author: "Riad Hossain"
 ---
 
 Every mapper, serializer and object-to-object converter answers the same question: how do I call a property setter when I only know its name at runtime? There are three answers, and they sit on a spectrum from unlimited flexibility to zero. Reflection calls the setter through metadata on every invocation. Compiled expressions build a delegate once, then call it at near hand-written speed. Source generators emit the delegate as compiled C#, so there is nothing to build at runtime at all. The mistake is picking one for the whole application instead of matching the tier to the call site.

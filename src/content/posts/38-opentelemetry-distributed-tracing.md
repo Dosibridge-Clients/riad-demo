@@ -6,7 +6,7 @@ category: "Performance & Diagnostics"
 tags: ["opentelemetry", "tracing", "observability"]
 date: "2026-03-04"
 level: "Advanced"
-author: "Riad"
+author: "Riad Hossain"
 ---
 
 A request that crosses three services and two databases cannot be understood from logs on a single host. Distributed tracing follows one request as a tree of spans, each span tagged with the timing and attributes of one unit of work, and it works because every hop carries the same trace identifier forward. OpenTelemetry is the vendor-neutral way to produce and export that data from .NET.

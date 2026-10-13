@@ -6,7 +6,7 @@ category: "Performance & Diagnostics"
 tags: ["health-checks", "kubernetes", "operations"]
 date: "2026-02-20"
 level: "Advanced"
-author: "Riad"
+author: "Riad Hossain"
 ---
 
 A health endpoint is a contract with the orchestrator, and the orchestrator acts on it destructively. Kubernetes restarts a pod whose liveness probe fails and removes from load balancing a pod whose readiness probe fails. If both endpoints run the same comprehensive check, a temporarily unreachable dependency fails liveness, the pod is killed, and the restart makes the outage worse. The fix is to separate the questions and answer each with the narrowest check that is still honest.

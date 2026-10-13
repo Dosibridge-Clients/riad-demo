@@ -6,7 +6,7 @@ category: "Messaging & Distributed Systems"
 tags: ["webhooks", "delivery", "reliability"]
 date: "2025-11-22"
 level: "Advanced"
-author: "Riad"
+author: "Riad Hossain"
 ---
 
 A webhook is a promise you make to every subscriber: something happened, here it is, and we will keep trying until you accept it. The internet does not honour that promise by default, so the reliability has to be built into the sender. The common failure is treating the delivery as fire-and-forget inside the request that triggered it, so a slow or dead subscriber blocks your own transaction, and a crash loses the notification with no record that it ever existed.

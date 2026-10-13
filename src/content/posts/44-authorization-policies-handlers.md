@@ -6,7 +6,7 @@ category: "Security & Identity"
 tags: ["authorization", "policies", "aspnetcore"]
 date: "2026-01-27"
 level: "Advanced"
-author: "Riad"
+author: "Riad Hossain"
 ---
 
 `[Authorize(Roles = "Admin")]` answers a question about the user. Most real endpoints need to answer a question about the user and the resource: can this doctor read this patient's record, can this tenant member edit this document. The instinct is to load the resource inside the controller and write an `if`. That works until the same rule is needed from a minimal API, a background job and a SignalR hub, and now the check lives in four places and one of them gets it wrong during a refactor. Policies, requirements and handlers are the framework's answer: composable, testable, and declared at the endpoint.

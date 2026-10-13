@@ -6,7 +6,7 @@ category: "Architecture"
 tags: ["mediatr", "cqrs", "pipeline"]
 date: "2026-07-26"
 level: "Advanced"
-author: "Riad"
+author: "Riad Hossain"
 ---
 
 A pipeline behaviour is the cleanest way to bolt cross-cutting concerns onto request handling, and the easiest way to ship a security hole. Behaviours wrap every request that passes through the mediator, in the order you registered them, with no compiler help. Register a validation behaviour before an authorization behaviour and you have just let an unauthenticated caller drive your validation logic, your logging and your database lookups before anyone checked who they are. The mechanism is worth understanding before it bites.

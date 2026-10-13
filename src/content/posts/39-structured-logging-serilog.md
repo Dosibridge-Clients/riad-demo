@@ -6,7 +6,7 @@ category: "Performance & Diagnostics"
 tags: ["logging", "serilog", "observability"]
 date: "2026-02-26"
 level: "Advanced"
-author: "Riad"
+author: "Riad Hossain"
 ---
 
 A log line that reads "Order 42 failed" is a fact you can read and nothing you can query. A structured log event captures `OrderId = 42` as a property, so you can filter, count and group by it later. Serilog is built around that idea, and its enrichment, sink and level configuration decides what actually reaches the log store and how much it costs.

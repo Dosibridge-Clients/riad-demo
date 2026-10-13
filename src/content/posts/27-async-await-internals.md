@@ -6,7 +6,7 @@ category: "Async & Concurrency"
 tags: ["async", "valuetask", "internals"]
 date: "2026-05-09"
 level: "Advanced"
-author: "Riad"
+author: "Riad Hossain"
 ---
 
 Contrary to the recurring myth, `async` does not start a thread, and awaiting does not block one. The compiler rewrites an async method into a state machine, and the runtime decides at each suspension point whether that machine stays on the stack or moves to the heap. Understanding that decision is the difference between guessing at performance and knowing why a hot path allocates.

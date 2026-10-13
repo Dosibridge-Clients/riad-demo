@@ -6,7 +6,7 @@ category: "Async & Concurrency"
 tags: ["cancellation", "async", "robustness"]
 date: "2026-04-27"
 level: "Advanced"
-author: "Riad"
+author: "Riad Hossain"
 ---
 
 A cancellation token is not a switch that stops work; it is a request that cooperating code poll or observe and then act on. Nothing happens unless every layer passes it along and checks it, and a single method that drops the token on the floor means a client disconnect keeps a database query running to completion. Threading the token from the request edge through the data layer into worker loops is what makes timeouts, disconnects, and shutdown behave predictably.

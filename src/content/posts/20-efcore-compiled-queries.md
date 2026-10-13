@@ -6,7 +6,7 @@ category: "Data & EF Core"
 tags: ["efcore", "compiled-queries", "performance"]
 date: "2026-06-20"
 level: "Advanced"
-author: "Riad"
+author: "Riad Hossain"
 ---
 
 EF Core recompiles a LINQ query the first time it sees a given shape and then caches the translated plan, keyed by the expression tree with the parameter values factored out. Under load this cache is the difference between a warm, prepared query and a translation on every call. It stops working the moment your queries stop having a fixed shape — inline values, conditional includes, or a dynamically assembled predicate — and the cache fills with near-duplicate plans that never get reused.

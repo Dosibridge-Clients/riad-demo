@@ -6,7 +6,7 @@ category: "Messaging & Distributed Systems"
 tags: ["polly", "resilience", "fault-tolerance"]
 date: "2025-11-28"
 level: "Advanced"
-author: "Riad"
+author: "Riad Hossain"
 ---
 
 Retries alone are not resilience, they are amplification. The classic outage is a dependency that slows down, callers that retry every failure, and a retry storm that finishes the job the struggling dependency could not. In .NET 8 and 9, Polly is expressed through `ResiliencePipeline` and the `Microsoft.Extensions.Http.Resilience` integration, and the point of composing strategies is that each one bounds a different failure: a timeout bounds a single attempt, a retry bounds transient ones, and a circuit breaker bounds the whole client when the dependency is genuinely down.

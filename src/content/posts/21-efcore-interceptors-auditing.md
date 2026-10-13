@@ -6,7 +6,7 @@ category: "Data & EF Core"
 tags: ["efcore", "interceptors", "auditing"]
 date: "2026-06-14"
 level: "Advanced"
-author: "Riad"
+author: "Riad Hossain"
 ---
 
 Auditing columns written by hand inside every service method drift apart within a quarter. One team sets the update timestamp on the interactive save path, another forgets it during the nightly import, and the soft-delete flag is present in some tables and missing in the rest. EF Core interceptors close that gap because they execute inside the save pipeline itself, at a point no caller can skip. The price is that the interceptor becomes part of your persistence contract, so a defect there is systemic instead of local.

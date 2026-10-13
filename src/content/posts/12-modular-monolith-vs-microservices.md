@@ -6,7 +6,7 @@ category: "Architecture"
 tags: ["architecture", "monolith", "microservices"]
 date: "2026-08-07"
 level: "Advanced"
-author: "Riad"
+author: "Riad Hossain"
 ---
 
 Microservices are usually chosen for the wrong reason. A team of twelve engineers with a single deployable and one on-call rotation renames its folders to "services", adds a message broker, and discovers six months later that every feature still requires a coordinated deploy of five artifacts. That outcome has a name: the distributed monolith. It has all the operational cost of microservices and none of the autonomy, because the boundaries were drawn along technical layers rather than business capabilities.

@@ -6,7 +6,7 @@ category: "Architecture"
 tags: ["multi-tenancy", "saas", "data-isolation"]
 date: "2026-07-14"
 level: "Advanced"
-author: "Riad"
+author: "Riad Hossain"
 ---
 
 The leak that ends careers is a tenant that reads another tenant's data because the request never resolved a tenant and every resolver fell back to a default. It does not throw, it does not log an error, and it passes every test where a tenant is always present. Multi-tenancy has two independent problems hiding under one name: how you identify the tenant on a request, and how you isolate its data. Solve them separately or you will solve neither.
