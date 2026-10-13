@@ -3,7 +3,9 @@
 A professional, fully static blog site: **React 18 + Vite + TypeScript**, hand-written CSS design
 system, Markdown content, and **60 in-depth articles on advanced .NET Core**.
 
-Live demo: run `npm install && npm run dev` → http://localhost:5173
+**Live: <https://riad-demo.chatyro.com/>** (origin: <https://riad-demo.pages.dev/>)
+
+Local development: `npm install && npm run dev` → <http://localhost:5173>
 
 ---
 
@@ -109,8 +111,9 @@ tag, no `##` headings, fewer than three tags, or a duplicate slug/title.
 
 ## Deployment
 
-**Live demo: https://riad-demo.pages.dev/** — Cloudflare Pages project `riad-demo`, deployed by direct
-upload of the `dist/` folder.
+**Live: <https://riad-demo.chatyro.com/>** — Cloudflare Pages project `riad-demo`
+(account `4868eed3fbb1f1542879ee8f0632217b`), deployed by direct upload of the `dist/` folder. The
+`*.pages.dev` origin <https://riad-demo.pages.dev/> serves the same build.
 
 The build is static, so any host works:
 
