@@ -1,0 +1,5 @@
+# Single-page application fallback.
+# Every route is rendered by React Router, so unknown paths (including deep links
+# such as /posts/middleware-pipeline-order) must serve index.html with a 200
+# rather than a 404 from the static host.
+/*    /index.html   200
