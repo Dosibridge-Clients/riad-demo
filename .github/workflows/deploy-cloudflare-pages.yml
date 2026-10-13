@@ -1,0 +1,68 @@
+name: Deploy to Cloudflare Pages
+
+# Static site deployment. The site is already live at https://riad-demo.pages.dev/
+# (project `riad-demo`, direct-upload). This workflow keeps it up to date on every push.
+#
+# To enable it, add two repository secrets (Settings → Secrets and variables → Actions):
+#   CLOUDFLARE_ACCOUNT_ID  — Cloudflare account id
+#   CLOUDFLARE_API_TOKEN   — API token with the "Cloudflare Pages: Edit" permission
+# Without them the deploy step is skipped with a notice, so a missing secret never
+# produces a red build on an unrelated change.
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+concurrency:
+  group: cloudflare-pages-production
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+  deployments: write
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    env:
+      CF_ACCOUNT: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+      CF_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+      PROJECT: riad-demo
+    steps:
+      - uses: actions/checkout@v4
+
+      # Wrangler 4.x refuses to run on Node 20, so pin 22 here even though the app itself
+      # builds fine on older runtimes.
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+
+      - run: npm ci
+
+      # Content gate first: a post that breaks the publishing contract should fail the
+      # deploy rather than ship to the live site.
+      - name: Validate post content
+        run: npm run validate:posts
+
+      - name: Build
+        run: npm run build
+
+      - name: Check Cloudflare credentials
+        id: creds
+        run: |
+          if [ -z "$CF_TOKEN" ] || [ -z "$CF_ACCOUNT" ]; then
+            echo "ready=false" >> "$GITHUB_OUTPUT"
+            echo "::notice title=Deploy skipped::CLOUDFLARE_ACCOUNT_ID / CLOUDFLARE_API_TOKEN are not set, so the Pages deploy was skipped."
+          else
+            echo "ready=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Deploy to Cloudflare Pages
+        if: steps.creds.outputs.ready == 'true'
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          command: pages deploy dist --project-name=${{ env.PROJECT }} --branch=main

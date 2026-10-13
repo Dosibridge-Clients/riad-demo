@@ -109,15 +109,26 @@ tag, no `##` headings, fewer than three tags, or a duplicate slug/title.
 
 ## Deployment
 
-The build is static, so any host works. For GitHub Pages (project site under `/riad-demo/`):
+**Live demo: https://riad-demo.pages.dev/** — Cloudflare Pages project `riad-demo`, deployed by direct
+upload of the `dist/` folder.
 
-```bash
-npm run build -- --base=/riad-demo/
-```
+The build is static, so any host works:
 
-A ready workflow is included at `.github/workflows/deploy-pages.yml`; enable **Settings → Pages →
-Source: GitHub Actions**, then push to `main`. For a root domain (Cloudflare Pages, Netlify, S3, nginx)
-build with the default base — no configuration needed.
+| Host | Command / setting |
+| --- | --- |
+| Cloudflare Pages (current) | `npx wrangler@4 pages deploy dist --project-name=riad-demo --branch=main` |
+| Cloudflare Pages (Git integration) | build `npm run build`, output directory `dist`, root `/` |
+| GitHub Pages (project site) | `npm run build -- --base=/riad-demo/` |
+| Netlify / S3 / nginx | `npm run build`, serve `dist/` with an SPA fallback to `index.html` |
+
+`public/_redirects` (`/* /index.html 200`) is what makes deep links such as
+`/posts/middleware-pipeline-order` resolve on a static host; `public/_headers` sets immutable caching
+for hashed assets, revalidation for `index.html`, and baseline security headers. Both are copied into
+`dist/` by Vite and are already applied on the live deployment.
+
+`.github/workflows/deploy-cloudflare-pages.yml` keeps the live site current on every push to `main`.
+It validates the content, builds, and deploys — and skips the deploy with a notice (rather than
+failing) when `CLOUDFLARE_ACCOUNT_ID` / `CLOUDFLARE_API_TOKEN` repository secrets are absent.
 
 ## Notes
 
